@@ -1,0 +1,78 @@
+# Jarvis AI Assistant – Diligent Assignment
+
+A self-hosted, voice-enabled personal AI assistant built as part of the **Diligent – Code Meets Co-Pilot** exercise.
+
+This project demonstrates how an enterprise-style AI assistant can be implemented using a **self-hosted Large Language Model (LLM)**, a modern backend API, and a user-friendly web interface.
+
+---
+
+## Features
+
+- Self-hosted LLM using LLaMA 3 via Ollama
+- FastAPI backend
+- React-based frontend
+- Text-based conversational interface
+- Voice input (speech-to-text)
+- Voice output (text-to-speech)
+- Modular and extensible architecture
+- Vector memory integration planned (Pinecone)
+
+---
+
+## System Architecture
+
+Browser (React UI)
+↓
+FastAPI Backend
+↓
+LLaMA 3 (Ollama – Self Hosted)
+
+
+Voice interaction flow:
+
+Microphone → Speech-to-Text (Whisper) → LLaMA → Text-to-Speech → Audio Output
+
+
+---
+
+## Technology Stack
+
+| Layer | Technology |
+|------|------------|
+| LLM | LLaMA 3 (Ollama) |
+| Backend | FastAPI (Python) |
+| Frontend | React (Vite) |
+| Speech-to-Text | Faster-Whisper |
+| Text-to-Speech | Coqui TTS |
+| Environment | Python virtual environment, Node.js |
+| Version Control | Git and GitHub |
+
+---
+
+## Project Structure
+
+Jarvis/
+│
+├── backend/
+│ ├── app.py
+│ ├── llm.py
+│ ├── rag.py
+│ ├── speech_to_text.py
+│ ├── text_to_speech.py
+│ ├── embeddings.py
+│ ├── pinecone_db.py
+│ └── static/
+│
+├── frontend/
+│ ├── src/
+│ │ ├── App.jsx
+│ │ ├── Chat.jsx
+│ │ ├── VoiceChat.jsx
+│ │ ├── Message.jsx
+│ │ ├── api.js
+│ │ └── main.jsx
+│ └── index.html
+│
+├── .gitignore
+├── .env (not committed)
+└── README.md
